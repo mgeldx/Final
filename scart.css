@@ -148,6 +148,43 @@ main
   background-color: #ddd;
 }
 
+/* Decrease Button */
+.decrease-button {
+  display: inline-block;
+  color: #232f3e;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin-right: 5px; /* Add margin between buttons */
+}
+
+/* Increase Button */
+.increase-button {
+  display: inline-block;
+  color: #232f3e;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin-right: 5px; /* Add margin between buttons */
+}
+
+.hide-content 
+{
+   visibility: hidden;
+}
+
+
+
 
 
 
