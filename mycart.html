@@ -5,11 +5,12 @@
   		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="scart.css">
 		<title>Discovery Medical Store</title>
+		 
 		<script src="script.js"></script>
 	</head>
 	
 	<!-- Body -->
-	<body>
+	<body >
 		<!-- Header -->
 		<section id ="header">
 			<header>
@@ -98,10 +99,8 @@
 		
 		<!-- Script -->
 		<script>
-  // Function to add items to the cart
- // Function to add items to the cart
-// Function to add items to the cart
-function addToCart(product, price, quantity) {
+		
+  function addToCart(product, price, quantity) {
   var cartItemsData = localStorage.getItem("cartItems");
   var cartItems = cartItemsData ? JSON.parse(cartItemsData) : [];
 
@@ -128,6 +127,7 @@ function addToCart(product, price, quantity) {
   // Reload the page
   location.reload();
 }
+
 
 
 
@@ -210,20 +210,23 @@ function loadCartItems() {
     quantityCell.textContent = cartItems[i].quantity;
 
     var decreaseButton = document.createElement("button");
-    decreaseButton.textContent = "-";
-    decreaseButton.setAttribute("data-index", i);
-    decreaseButton.addEventListener("click", function () {
-      var index = parseInt(this.getAttribute("data-index"));
-      decreaseCartItem(index);
-    });
+	decreaseButton.textContent = "-";
+	decreaseButton.setAttribute("data-index", i);
+	decreaseButton.classList.add("decrease-button"); // Add the class name
+	decreaseButton.addEventListener("click", function () {
+	  var index = parseInt(this.getAttribute("data-index"));
+	  decreaseCartItem(index);
+	});
 
-    var increaseButton = document.createElement("button");
-    increaseButton.textContent = "+";
-    increaseButton.setAttribute("data-index", i);
-    increaseButton.addEventListener("click", function () {
-      var index = parseInt(this.getAttribute("data-index"));
-      addToCart(cartItems[index].productName, cartItems[index].price);
-    });
+	var increaseButton = document.createElement("button");
+	increaseButton.textContent = "+";
+	increaseButton.setAttribute("data-index", i);
+	increaseButton.classList.add("increase-button"); // Add the class name
+	increaseButton.addEventListener("click", function () {
+	  var index = parseInt(this.getAttribute("data-index"));
+	  addToCart(cartItems[index].productName, cartItems[index].price);
+	});
+
 
     row.appendChild(productCell);
     row.appendChild(priceCell);
