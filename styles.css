@@ -1,0 +1,260 @@
+
+
+* 
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+header 
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 100px;
+	background-color: #232f3e;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 99;
+}
+
+.logo 
+{ 
+	font-size: 1.5em;
+	color: #f1f1f1;
+	user-select: none;
+}
+
+.navigation a 
+{
+	position: relative;
+	font-size: 1.1em;
+	color: #f1f1f1;
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: 40px;
+}
+
+
+/* Body */
+body 
+{
+	font-family: Arial, sans-serif;
+	color: #333;
+	line-height: 1.4;
+	background: #f1f1f1;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	
+}
+
+/* Main */
+main 
+{
+	background-image: url("ecom.jpg");	
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+}
+
+/* Banner */
+section#banner .banner 
+{
+	text-align: center;
+	padding: 150px 0;
+	backdrop-filter: blur(100px);
+	height: 100vh;	
+}
+
+section#banner h1 
+{
+	font-size: 3em;
+	color: #232f3e;
+	margin-bottom: 20px;
+}
+
+section#banner p 
+{
+	font-size: 1.2em;
+	color: #232f3e;
+	margin-bottom: 40px;
+}
+
+section#banner .cta-button 
+{
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #232f3e;
+	color: #f1f1f1;
+	font-size: 1.1em;
+	text-decoration: none;
+	border-radius: 4px;
+}
+
+
+
+/* Product Cards */
+#products .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: #232f3e;
+  color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 10px;
+  flex: 0 0 calc(25% - 20px);
+  max-width: 200px; /* Added to limit the maximum width of the card */
+  padding-top: 30px; /* Add top padding of 30px */
+  padding-bottom: 30px;
+}
+
+.card h2 {
+  font-size: 1em; /* Adjust the font size as desired */
+  padding-top: 30px;
+  margin-bottom: 10px;
+}
+
+.half-black-white {
+  background: linear-gradient(to right, #000 50%, #fff 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.buy-now-button {
+  display: inline-block;
+  padding: 8px 16px; /* Adjust the padding as desired */
+  background-color: #f1f1f1;
+  color: #232f3e;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.buy-now-button:hover {
+  background-color: #555;
+}
+
+@media (max-width: 768px) {
+  #products .wrapper {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .card {
+    flex: 0 0 calc(100% - 20px);
+    max-width: 100%; /* Added to make the cards take the full width on smaller screens */
+  }
+}
+
+
+
+/* Chat Button */
+
+.chat-button 
+{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.chat-button img 
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chat-button .icon {
+  color: #232f3e;
+  font-size: 1.5em;
+}
+
+/* Footer */
+footer 
+{
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	background-color: #232f3e;
+	padding: 50px;
+	color: #f1f1f1;
+}
+
+.col 
+{
+	flex: 1;
+	margin-right: 50px;
+}
+
+.col:last-child 
+{
+	margin-right: 0;
+}
+
+.logo 
+{
+	font-size: 1.5em;
+	color: #f1f1f1;
+	margin-bottom: 20px;
+}
+
+.logo a 
+{
+	color: #f1f1f1;
+	text-decoration: none;
+}
+
+.col p 
+{
+	margin-bottom: 10px;
+}
+
+.col a 
+{
+	color: #f1f1f1;
+	text-decoration: none;
+}
+
+@media (max-width: 768px) 
+{
+	footer 
+	{
+		flex-wrap: wrap;
+	}
+
+	.col 
+	{
+		flex: 1 0 100%;
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+}
+
+
+     

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+  <title>Discovery Medical Store - Products</title>
+  <link rel="stylesheet" type="text/css" href="sproducts.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+	<section id ="header">
+			<header>
+				<h2 class="logo">Discovery Medical Store</h2>							
+				<div>
+					<nav class="navigation">
+						<a href="index.html">Home</a>
+						<a href="products.html">Products</a>
+						<a href="mycart.html" id="cartLink">Cart</a>
+						<a href="myorders.html">Orders</a>
+						<a href="myprofile.html">Profile</a>          
+						<a href="login.html">Login</a>
+						<a href="index.html">Logout</a>
+					</nav>
+				</div>				
+		  </header>
+	</section>	  
+
+  <main>
+	<h1>Available Products</h1>
+
+    <section id="products">
+		<div class="wrapper">
+		  <div class="product-list">
+			<!-- Addison’s Disease -->
+			<div class="card">
+				<i class="fa-solid fa-ribbon fa-3x" style="color: #87CEEB;"></i>
+				<h2>Addison’s Disease</h2>
+				<a href="#addisons" class="buy-now-button">View Products</a>
+			</div>
+
+			<!-- Asthma -->
+			<div class="card">
+				<i class="fa-solid fa-ribbon fa-3x" style="color: 808080"></i>
+				<h2>Asthma</h2>
+				<a href="#asthma" class="buy-now-button">View Products</a>
+			</div>
+
+			<!-- Bipolar Mood Disorder -->
+			<div class="card">
+				<i class="fa-solid fa-ribbon fa-3x half-black-white"></i>
+				<h2>Bipolar Mood Disorder</h2>
+				<a href="#bipolar" class="buy-now-button">View Products</a>
+			</div>
+
+			<!-- Bronchiectasis -->
+			<div class="card">
+				<i class="fa-solid fa-ribbon fa-3x" style="color: gold;"></i>
+				<h2>Bronchiectasis</h2>
+				<a href="#bronchiectasis" class="buy-now-button">View Products</a>
+			</div>
+		  </div>
+		</div>  
+    </section>
+		
+		<div class="pwrapper">
+			<!-- Addison Products -->
+			<section id="addisons" class="disease-section">
+				<h2 class="disease-heading">Addison’s Disease</h2>
+				<section id="product-grid">	
+					<!-- Product 1 -->
+					<div class="product-card">
+						<h2 class = "product-name">Hydrocortisone 10mg</h2>
+						<p><strong>Condition:</strong> Addison’s Disease</p>
+						<p><strong>CDA:</strong> R20,00</p>
+						<p><strong>CDA2:</strong> R20,00</p>
+						<p><strong>Medicine Class:</strong> Corticosteroids</p>
+						<p><strong>Active Ingredient:</strong> Hydrocortisone</p>
+						<p><strong>Strength:</strong> 10mg</p>
+						<a href="#" class="buy-now-button" onclick="addToCart('Hydrocortisone 10mg', 20.00, 1)">Buy</a>
+					</div>
+					<!-- Product 2 -->
+					<div class="product-card">
+						<h2 class = "product-name">Fludrocortisone 100mcg</h2>
+						<p><strong>Condition:</strong> Addison’s Disease</p>
+						<p><strong>CDA:</strong> R32,00</p>
+						<p><strong>CDA2:</strong> R32,00</p>
+						<p><strong>Medicine Class:</strong> Mineralocorticoids</p>
+						<p><strong>Active Ingredient:</strong> Fludrocortisone</p>
+						<p><strong>Strength:</strong> 100mcg</p>
+						<a href="#" class="buy-now-button" onclick="addToCart('Fludrocortisone 100mcg', 32.00, 1)">Buy</a>
+					</div>
+					
+					<!-- Product 1 -->
+					<div class="product-card">
+						<h2 class = "product-name">Hydrocortisone 10mg</h2>
+						<p><strong>Condition:</strong> Addison’s Disease</p>
+						<p><strong>CDA:</strong> R20,00</p>
+						<p><strong>CDA2:</strong> R20,00</p>
+						<p><strong>Medicine Class:</strong> Corticosteroids</p>
+						<p><strong>Active Ingredient:</strong> Hydrocortisone</p>
+						<p><strong>Strength:</strong> 10mg</p>
+						<a href="#" class="buy-now-button" onclick="addToCart('Hydrocortisone 10mg', 20.00, 1)">Buy</a>
+					</div>
+					<!-- Product 2 -->
+					<div class="product-card">
+						<h2 class = "product-name">Fludrocortisone 100mcg</h2>
+						<p><strong>Condition:</strong> Addison’s Disease</p>
+						<p><strong>CDA:</strong> R32,00</p>
+						<p><strong>CDA2:</strong> R32,00</p>
+						<p><strong>Medicine Class:</strong> Mineralocorticoids</p>
+						<p><strong>Active Ingredient:</strong> Fludrocortisone</p>
+						<p><strong>Strength:</strong> 100mcg</p>
+						<a href="#" class="buy-now-button" onclick="addToCart('Fludrocortisone 100mcg', 32.00, 1)">Buy</a>
+					</div>					
+				</section>
+			</section>	
+		</div>
+			
+		<div class="pwrapper">
+			<!-- Asthma Products -->
+			<section id="asthma" class="disease-section">
+				<h2 class="disease-heading">Asthma</h2>
+				<section id="product-grid">			
+					<!-- Product 1 -->
+					<div class="product-card">
+						<h2 class = "product-name">Foratec HFA 120 dose</h2>
+						<p><strong>Condition:</strong> Asthma</p>
+						<p><strong>CDA:</strong> R205,00</p>
+						<p><strong>CDA2:</strong> R205,00</p>
+						<p><strong>Medicine Class:</strong> Adrenergics: Long-acting - Formoterol</p>
+						<p><strong>Active Ingredient:</strong> Formoterol</p>
+						<p><strong>Strength:</strong> 12mcg/dose</p>
+						<a href="#" class="buy-now-button" onclick="addToCart('Foratec HFA 120 dose', 205.00, 1)">Buy</a>
+					</div>
+										
+					<!-- Product 2 -->
+					<div class="product-card">
+						<h2 class = "product-name">Ventolin HFA 200 dose</h2>
+						<p><strong>Condition:</strong> Asthma</p>
+						<p><strong>CDA:</strong> R185,00</p>
+						<p><strong>CDA2:</strong> R185,00</p>
+						<p><strong>Medicine Class:</strong> Adrenergics: Short-acting - Salbutamol</p>
+						<p><strong>Active Ingredient:</strong> Salbutamol</p>
+						<p><strong>Strength:</strong> 100mcg/dose</p>
+						<a href="#" class="buy-now-button" onclick="addToCart('Ventolin HFA 200 dose', 185.00, 1)">Buy</a>
+						</div>
+				</section>	
+			</section>	
+		</div>													
+		
+		<div class="pwrapper">			
+			<!-- Bipolar Products -->
+			<section id="bipolar" class="disease-section">
+				<h2 class="disease-heading">Bipolar Mood Disorder</h2>
+				<section id="product-grid">
+					<!-- Product 1 -->
+					<div class="product-card">
+						<h2 class = "product-name">Lithium Carbonate 300mg</h2>
+						<p><strong>Condition:</strong> Bipolar Mood Disorder</p>
+						<p><strong>CDA:</strong> R12,00</p>
+						<p><strong>CDA2:</strong> R12,00</p>
+						<p><strong>Medicine Class:</strong> Mood Stabilizers - Lithium Carbonate</p>
+						<p><strong>Active Ingredient:</strong> Lithium Carbonate</p>
+						<p><strong>Strength:</strong> 300mg</p>
+						<a href="#" class="buy-now-button" onclick="addToCart('Lithium Carbonate 300mg', 12.00, 1)">Buy</a>
+					</div>
+					<!-- Product 2 -->
+					<div class="product-card">
+						<h2 class = "product-name">Quetiapine 25mg</h2>
+						<p><strong>Condition:</strong> Bipolar Mood Disorder</p>
+						<p><strong>CDA:</strong> R18,00</p>
+						<p><strong>CDA2:</strong> R18,00</p>
+						<p><strong>Medicine Class:</strong> Atypical Antipsychotics</p>
+						<p><strong>Active Ingredient:</strong> Quetiapine</p>
+						<p><strong>Strength:</strong> 25mg</p>
+						<a href="#" class="buy-now-button" onclick="addToCart('Quetiapine 25mg', 18.00, 1)">Buy</a>
+					</div>
+				</section>
+			</section>	
+		</div>	
+		
+		<div class="pwrapper">
+			<!-- Bron Products -->
+			<section id="bronchiectasis" class="disease-section">
+				<h2 class="disease-heading">Bronchiectasis</h2>
+				<section id="product-grid">
+					<!-- Product 1 -->
+					<div class="product-card">
+						<h2 class = "product-name">Azithromycin 250mg</h2>
+						<p><strong>Condition:</strong> Bronchiectasis</p>
+						<p><strong>CDA:</strong> R40,00</p>
+						<p><strong>CDA2:</strong> R40,00</p>
+						<p><strong>Medicine Class:</strong> Macrolide Antibiotics - Azithromycin</p>
+						<p><strong>Active Ingredient:</strong> Azithromycin</p>
+						<p><strong>Strength:</strong> 250mg</p>
+						<a href="#" class="buy-now-button" onclick="addToCart('Azithromycin 250mg', 40.00, 1)">Buy</a>
+					</div>
+					<!-- Product 2 -->
+					<div class="product-card">
+						<h2 class = "product-name">Erythromycin 500mg</h2>
+						<p><strong>Condition:</strong> Bronchiectasis</p>
+						<p><strong>CDA:</strong> R35,00</p>
+						<p><strong>CDA2:</strong> R35,00</p>
+						<p><strong>Medicine Class:</strong> Macrolide Antibiotics - Erythromycin</p>
+						<p><strong>Active Ingredient:</strong> Erythromycin</p>
+						<p><strong>Strength:</strong> 500mg</p>
+						<a href="#" class="buy-now-button" onclick="addToCart('Erythromycin 500mg', 35.00, 1)">Buy</a>
+					</div>
+				</section>
+			</section>	
+		</div>
+		
+		<!-- Chat -->
+			<button id="chatButton" class="chat-button">
+				<span class="icon">
+					<ion-icon name="chatbox"></ion-icon>
+				</span>
+			</button>
+	
+	</main>
+
+	<!-- Footer -->			
+	<footer>
+		<div class ="col">
+			<h3 class="logo">Discovery Medical Store</h3>				
+			<p><strong>Address:</strong> Sandton, 2146, PO Box 786722</p>
+			<p><strong>Phone:</strong> 0860 99 88 77<p>
+			<p><strong>Operating hours:</strong></p>
+			<p>07:00 - 20:00 Monday to Friday<p>
+			<p>08:00 - 13:00 Saturdays</p>
+			<p>© 2023 Discovery Medical Store. All rights reserved.</p>
+		</div>
+		<div class ="col">
+			<h3 class="logo">Our Services</h3>				
+			<p><a href="products.html">Products</a></p>
+			<p><a href="mycart.html">Cart</a></p>
+			<p><a href="myorders.html">Orders</a></p>
+			<p><a href="myprofile.html" class="dropbtn">Profile</a></p>
+		</div>
+		<div class ="col">
+			<h3 class="logo">Log</h3>				
+			<p><a href="login.html">Login</a></p>
+			<p><a href="index.html">Logout</a></p>
+		</div>
+	</footer>
+	<!-- Script -->
+	<script>
+	  // Function to add a product to the cart and redirect to the cart page
+	  function addToCart(productName, price, quantity) {
+		var cartItemsData = localStorage.getItem("cartItems");
+		var cartItems = [];
+
+		if (cartItemsData) {
+		  cartItems = JSON.parse(cartItemsData);
+		}
+
+		cartItems.push({ productName: productName, price: price, quantity: quantity });
+		localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+		window.location.href = "mycart.html"; // Redirect to the cart page
+	  }
+	</script>
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+* 
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+header 
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 100px;
+	background-color: #232f3e;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 99;
+}
+
+.logo 
+{
+	font-size: 1.5em;
+	color: #f1f1f1;
+	user-select: none;
+}
+
+.navigation a 
+{
+	position: relative;
+	font-size: 1.1em;
+	color: #f1f1f1;
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: 40px;
+}
+
+.dropdown 
+{
+	float: right;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn 
+{
+	width: 130px;
+	background: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 1.1em;
+	color: #f1f1f1;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn 
+{
+	background-color: transparent;
+}
+
+.dropdown-content 
+{
+	display: none;
+	position: absolute;
+	background-color: #232f3e;
+	z-index: 2;
+}
+
+.dropdown-content a 
+{
+	float: none;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown:hover .dropdown-content 
+{
+	display: block;
+}
+
+/* Body */
+body 
+{
+	background-image: url("ecom.jpg");	
+	background-size: cover;
+	background-position: center;
+	font-family: Arial, sans-serif;
+	color: #232f3e;
+}
+
+/* Main */
+main 
+{
+	padding: 100px;
+	backdrop-filter: blur(100px);
+	height: 100vh;
+	padding: 80px;
+}
+#cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+#cart-table th,
+#cart-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#cart-table th {
+  text-align: left;
+}
+
+.cart-buttons {
+  margin-top: 20px;
+}
+
+.cart-buttons button {
+  display: inline-block;
+  background-color: #f1f1f1;
+  color: #232f3e;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#cart-table .quantity-buttons button {
+  display: inline-block;
+  background-color: #f1f1f1;
+  color: #232f3e;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+#cart-table .quantity-buttons button:hover {
+  background-color: #ddd;
+}
+
+
+
+
+
+/* Chat Button */
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.chat-button .icon {
+  color: #232f3e;
+  font-size: 1.5em;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #232f3e;
+  padding: 50px;
+  color: #f1f1f1;
+}
+
+.col {
+  flex: 1;
+  margin-right: 50px;
+}
+
+.col:last-child {
+  margin-right: 0;
+}
+
+.logo-footer {
+  font-size: 1.5em;
+  color: #f1f1f1;
+  margin-bottom: 20px;
+}
+
+.logo-footer a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.col p {
+  margin-bottom: 10px;
+}
+
+.col a {
+  color: #f1f1f1;
+  text-decoration: none;
+}

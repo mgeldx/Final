@@ -1,0 +1,251 @@
+<html>
+	<!-- Head -->
+	<head>		
+		<meta charset="UTF-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="scart.css">
+		<title>Discovery Medical Store</title>
+		<script src="script.js"></script>
+	</head>
+	
+	<!-- Body -->
+	<body>
+		<!-- Header -->
+		<section id ="header">
+			<header>
+				<h2 class="logo">Discovery Medical Store</h2>							
+				<div>
+					<nav class="navigation">
+						<a href="index.html">Home</a>
+						<a href="products.html">Products</a>
+						<a href="mycart.html">Cart</a>
+						<a href="myorders.html">Orders</a>
+						<a href="myprofile.html">Profile</a>          
+						<a href="login.html">Login</a>
+						<a href="index.html">Logout</a>
+					</nav>
+				</div>				
+		  </header>
+				
+		</section>
+		
+		<main>	
+		
+			<h1>Shopping Cart</h1>
+  
+			  <table id="cart-table">
+				  <thead>
+					<tr>
+					  <th>Product</th>
+					  <th>Price</th>
+					  <th>Quantity</th>
+					  <th></th>
+					</tr>
+				  </thead>
+				  <tbody id="cart-items">
+					<!-- Cart items will be dynamically added here -->
+				  </tbody>
+				  <tfoot>
+					<tr>
+					  <td colspan="2">Total:</td>
+					  <td id="cart-total-quantity">0</td>
+					  <td id="cart-total">0</td>
+					  <button onclick="buyCartItems()">-</button>
+					<button onclick="clearCart()">+</button>
+					</tr>
+				  </tfoot>
+				</table>
+
+			  <!-- Buy and Clear buttons -->
+				<div class="cart-buttons">
+					<button onclick="buyCartItems()">Buy</button>
+					<button onclick="clearCart()">Clear Cart</button>
+				</div>
+
+			
+
+	
+			<!-- Chat -->
+			<button id="chatButton" class="chat-button">
+				<span class="icon">
+					<ion-icon name="chatbox"></ion-icon>
+				</span>
+			</button>						
+		</main>
+		
+		<!-- Footer -->			
+		<footer>
+			<div class ="col">
+				<h3 class="logo">Discovery Medical Store</h3>				
+				<p><strong>Address:</strong> Sandton, 2146, PO Box 786722</p>
+				<p><strong>Phone:</strong> 0860 99 88 77<p>
+				<p><strong>Operating hours:</strong></p>
+				<p>07:00 - 20:00 Monday to Friday<p>
+				<p>08:00 - 13:00 Saturdays</p>
+				<p>© 2023 Discovery Medical Store. All rights reserved.</p>
+			</div>
+			<div class ="col">
+				<h3 class="logo">Our Services</h3>				
+				<p><a href="products.html">Products</a></p>
+				<p><a href="mycart.html">Cart</a></p>
+				<p><a href="myorders.html">Orders</a></p>
+				<p><a href="myprofile.html" class="dropbtn">Profile</a></p>
+			</div>
+			<div class ="col">
+				<h3 class="logo">Log</h3>				
+				<p><a href="login.html">Login</a></p>
+				<p><a href="index.html">Logout</a></p>
+			</div>
+		</footer>
+		
+		<!-- Script -->
+		<script>
+  // Function to add items to the cart
+ // Function to add items to the cart
+// Function to add items to the cart
+function addToCart(product, price, quantity) {
+  var cartItemsData = localStorage.getItem("cartItems");
+  var cartItems = cartItemsData ? JSON.parse(cartItemsData) : [];
+
+  // Check if the product already exists in the cart
+  var existingItem = cartItems.find(item => item.productName === product);
+  if (existingItem) {
+    // Increase quantity if the item already exists
+    existingItem.quantity++;
+  } else {
+    // Create a new cart item with quantity 1
+    var newItem = {
+      productName: product,
+      price: price,
+      quantity: quantity
+    };
+
+    // Add the new item to the cart items
+    cartItems.push(newItem);
+  }
+
+  // Update the cart items in localStorage
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+  // Reload the page
+  location.reload();
+}
+
+
+
+
+/// Function to remove a cart item
+  function removeCartItem(index) {
+    var cartItemsData = localStorage.getItem("cartItems");
+    var cartItems = cartItemsData ? JSON.parse(cartItemsData) : [];
+
+    // Remove the item at the specified index
+    cartItems.splice(index, 1);
+
+    // Update the cart items in localStorage
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+    // Reload the page
+    location.reload();
+  }
+
+  // Function to clear the cart
+  function clearCart() {
+    // Clear the cart items in localStorage
+    localStorage.removeItem("cartItems");
+
+    // Reload the page
+    location.reload();
+  }
+	
+function decreaseCartItem(index) {
+  var cartItemsData = localStorage.getItem("cartItems");
+  var cartItems = cartItemsData ? JSON.parse(cartItemsData) : [];
+
+  // Decrease the quantity of the item at the specified index
+  if (cartItems[index].quantity > 1) {
+    cartItems[index].quantity--;
+  } else {
+    cartItems.splice(index, 1); // Remove the item if quantity becomes zero
+  }
+
+  // Update the cart items in localStorage
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+  // Reload the page
+  location.reload();
+}
+
+// Function to calculate the total cart quantity and value
+function calculateTotal() {
+  var cartItemsData = localStorage.getItem("cartItems");
+  var cartItems = cartItemsData ? JSON.parse(cartItemsData) : [];
+  var totalQuantity = 0;
+  var totalValue = 0;
+
+  for (var i = 0; i < cartItems.length; i++) {
+    totalQuantity += cartItems[i].quantity;
+    totalValue += cartItems[i].price * cartItems[i].quantity;
+  }
+
+  document.getElementById("cart-total-quantity").innerText = totalQuantity;
+  document.getElementById("cart-total").innerText = totalValue.toFixed(2);
+}
+
+// Function to load cart items from localStorage
+function loadCartItems() {
+  var cartItemsData = localStorage.getItem("cartItems");
+  var cartItems = cartItemsData ? JSON.parse(cartItemsData) : [];
+
+  var cartItemsContainer = document.getElementById("cart-items");
+  cartItemsContainer.innerHTML = ""; // Clear existing cart items
+
+  for (var i = 0; i < cartItems.length; i++) {
+    var row = document.createElement("tr");
+    var productCell = document.createElement("td");
+    var priceCell = document.createElement("td");
+    var quantityCell = document.createElement("td");
+    var buttonsCell = document.createElement("td");
+
+    productCell.textContent = cartItems[i].productName;
+    priceCell.textContent = cartItems[i].price.toFixed(2);
+    quantityCell.textContent = cartItems[i].quantity;
+
+    var decreaseButton = document.createElement("button");
+    decreaseButton.textContent = "-";
+    decreaseButton.setAttribute("data-index", i);
+    decreaseButton.addEventListener("click", function () {
+      var index = parseInt(this.getAttribute("data-index"));
+      decreaseCartItem(index);
+    });
+
+    var increaseButton = document.createElement("button");
+    increaseButton.textContent = "+";
+    increaseButton.setAttribute("data-index", i);
+    increaseButton.addEventListener("click", function () {
+      var index = parseInt(this.getAttribute("data-index"));
+      addToCart(cartItems[index].productName, cartItems[index].price);
+    });
+
+    row.appendChild(productCell);
+    row.appendChild(priceCell);
+    row.appendChild(quantityCell);
+    row.appendChild(buttonsCell);
+    buttonsCell.appendChild(decreaseButton);
+    buttonsCell.appendChild(increaseButton);
+
+    cartItemsContainer.appendChild(row);
+  }
+
+  calculateTotal();
+}
+
+// Load cart items when the page is loaded
+window.addEventListener("load", loadCartItems);
+
+</script>
+
+		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	</body>
+</html>

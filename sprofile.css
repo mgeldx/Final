@@ -1,0 +1,245 @@
+
+
+/* Global Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 100px;
+	background-color: #232f3e;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 99;
+}
+
+.logo {
+	font-size: 1.5em;
+	color: #f1f1f1;
+	user-select: none;
+}
+
+.search-bar {
+	padding: 6px 12px;
+	border: none;
+	border-radius: 5px;
+	margin-right: 10px;
+	font-size: 1em;
+}
+
+@media (max-width: 768px) {
+	.search-bar {
+		margin-bottom: 10px;
+	}
+}
+
+.navigation a {
+	position: relative;
+	font-size: 1.1em;
+	color: #f1f1f1;
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: 40px;
+}
+
+.dropdown {
+	float: right;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+	width: 130px;
+	background: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 1.1em;
+	color: #f1f1f1;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+	background-color: transparent;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #232f3e;
+	z-index: 2;
+}
+
+.dropdown-content a {
+	float: none;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* Body */
+body {
+	font-family: Arial, sans-serif;
+	color: #333;
+	line-height: 1.4;
+	background: #f1f1f1;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+/* Main */
+main {
+	background-image: url("ecom.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+}
+
+main #profile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: calc(100px + 5.5%);
+}
+
+.wrapper {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  background: transparent;
+  border: 1px solid #232f3e;
+  border-radius: 20px;
+  backdrop-filter: blur(100px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column; /* Added */
+  justify-content: flex-start; /* Updated */
+  align-items: center; /* Updated */
+  overflow: hidden;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 20px; /* Updated */
+  margin-bottom: 20px;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+ul li:first-child {
+  font-weight: bold;
+}
+
+/* Chat Button */
+.chat-button {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #f1f1f1;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	z-index: 99;
+}
+
+.chat-button img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.chat-button .icon {
+	color: #232f3e;
+	font-size: 1.5em;
+}
+
+/* Footer */
+footer {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	background-color: #232f3e;
+	padding: 50px;
+	color: #f1f1f1;
+}
+
+.col {
+	flex: 1;
+	margin-right: 50px;
+}
+
+.col:last-child {
+	margin-right: 0;
+}
+
+.logo {
+	font-size: 1.5em;
+	color: #f1f1f1;
+	margin-bottom: 20px;
+}
+
+.logo a {
+	color: #f1f1f1;
+	text-decoration: none;
+}
+
+.col p {
+	margin-bottom: 10px;
+}
+
+.col a {
+	color: #f1f1f1;
+	text-decoration: none;
+}
+
+@media (max-width: 768px) {
+	footer {
+		flex-wrap: wrap;
+	}
+
+	.col {
+		flex: 1 0 100%;
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+}
+

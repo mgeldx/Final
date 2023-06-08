@@ -1,0 +1,99 @@
+<html>
+	<!-- Head -->
+	<head>		
+		<meta charset="UTF-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="scart.css">
+		<title>Discovery Medical Store</title>
+		<script src="script.js"></script>
+	</head>
+	
+	<!-- Body -->
+	<body>
+		<!-- Header -->
+		<section id ="header">
+			<header>
+				<h2 class="logo">Discovery Medical Store</h2>							
+				<div>
+					<nav class="navigation">
+						<a href="index.html">Home</a>
+						<a href="products.html">Products</a>
+						<a href="mycart.html">Cart</a>
+						<a href="myorders.html">Orders</a>
+						<a href="myprofile.html">Profile</a>          
+						<a href="login.html">Login</a>
+						<a href="index.html">Logout</a>
+					</nav>
+				</div>				
+		  </header>
+				
+		</section>
+		
+		<main>			
+			
+			<h1>Product Upload</h1>
+			 <form action="upload.php" method="post" enctype="multipart/form-data">
+				<label for="name">Product Name:</label>
+				<input type="text" id="name" name="name" required><br>
+
+				<label for="condition">Condition:</label>
+				<input type="text" id="condition" name="condition" required><br>
+
+				<label for="cda">CDA:</label>
+				<input type="text" id="cda" name="cda" required><br>
+
+				<label for="cda2">CDA2:</label>
+				<input type="text" id="cda2" name="cda2" required><br>
+
+				<label for="medicine-class">Medicine Class:</label>
+				<input type="text" id="medicine-class" name="medicine_class" required><br>
+
+				<label for="active-ingredient">Active Ingredient:</label>
+				<input type="text" id="active-ingredient" name="active_ingredient" required><br>
+
+				<label for="strength">Strength:</label>
+				<input type="text" id="strength" name="strength" required><br>
+
+				<label for="image">Product Image:</label>
+				<input type="file" id="image" name="image" accept="image/*" required><br>
+
+				<input type="submit" value="Upload">
+			</form>
+	
+			<!-- Chat -->
+			<button id="chatButton" class="chat-button">
+				<span class="icon">
+					<ion-icon name="chatbox"></ion-icon>
+				</span>
+			</button>						
+		</main>
+		
+		<!-- Footer -->			
+		<footer>
+			<div class ="col">
+				<h3 class="logo">Discovery Medical Store</h3>				
+				<p><strong>Address:</strong> Sandton, 2146, PO Box 786722</p>
+				<p><strong>Phone:</strong> 0860 99 88 77<p>
+				<p><strong>Operating hours:</strong></p>
+				<p>07:00 - 20:00 Monday to Friday<p>
+				<p>08:00 - 13:00 Saturdays</p>
+				<p>© 2023 Discovery Medical Store. All rights reserved.</p>
+			</div>
+			<div class ="col">
+				<h3 class="logo">Our Services</h3>				
+				<p><a href="products.html">Products</a></p>
+				<p><a href="mycart.html">Cart</a></p>
+				<p><a href="myorders.html">Orders</a></p>
+				<p><a href="myprofile.html" class="dropbtn">Profile</a></p>
+			</div>
+			<div class ="col">
+				<h3 class="logo">Log</h3>				
+				<p><a href="login.html">Login</a></p>
+				<p><a href="index.html">Logout</a></p>
+			</div>
+		</footer>
+		
+		<!-- Script -->
+		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	</body>
+</html>
